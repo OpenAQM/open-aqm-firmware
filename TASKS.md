@@ -1,7 +1,7 @@
-# Welcome to OpenAQM task list
+# Welcome to the OpenAQM task list
 This document contains a list of all the steps needed to complete the development of OpenAQM firmware.
 
-We will each pick an task to work on, test and push to the repository. Once an task is complete, remember to commit with a message that begins with:
+We will each pick a task to work on, test and push to the repository. Once a task is complete, remember to commit with a message that begins with:
 
 1. The task name.
 2. The task ID.
