@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <dht.h>
+#include <Adafruit_GFX.h>
 
 // put function declarations here:
 int myFunction(int, int);
