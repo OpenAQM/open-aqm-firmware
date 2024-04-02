@@ -3,9 +3,8 @@
 // NOTE This file will slowly be migrated into the platform header files.
 
 // pin mapping
-
 //Button
-#define FLASH 0
+#define BTN_1 0
 
 //MP503
 #define MP503_1 2
@@ -56,10 +55,10 @@
 #define BTN_STATE_ARRAY {LOW, HIGH, HIGH}
 
 // button order is: select, up, down
-#define BTN_NUMBER 3
-#define BTN_POSX_ARRAY {24, 208, 208}
-#define BTN_POSY_ARRAY {190, 44, 190}
-#define BTN_POS_ISTOP_ARRAY {false, true, false}
-#define BTN_POS_ISLEFT_ARRAY {true, false, false}
-#define BTN_NAME_ARRAY {"SELECT", "UP", "DOWN"}
-#define BTN_PIN_ARRAY {BTN_1, BTN_2, BTN_3}
+ #define BTN_NUMBER 1
+#define BTN_POSX_ARRAY {24}
+#define BTN_POSY_ARRAY {190}
+#define BTN_POS_ISTOP_ARRAY {false}
+#define BTN_POS_ISLEFT_ARRAY {true}
+#define BTN_NAME_ARRAY {"SELECT"}
+#define BTN_PIN_ARRAY {BTN_1}

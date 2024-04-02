@@ -8,11 +8,11 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <Preferences.h>
-
+#include "hal/oaqm_filesystem.h"
 #include "hal/button.h"
 #include <devices/interfaces/OaqmTimeProvider.h>
-#include "osw_config_keys.h"
-#include "osw_pins.h"
+#include "oaqm_config_keys.h"
+#include "oaqm_pins.h"
 
 class OaqmHal {
   public:
@@ -24,7 +24,7 @@ class OaqmHal {
         return this->_devices.get();
     };
 
-#if OSW_PLATFORM_ENVIRONMENT == 1
+#if OAQM_PLATFORM_ENVIRONMENT == 1
     class Environment;
     Environment* environment() const {
         return this->_environment.get();
@@ -94,10 +94,10 @@ class OaqmHal {
      */
     uint8_t screenBrightness(bool checkHardware = false);
 
-    Arduino_Canvas_Graphics2D* getCanvas(void);
-    Graphics2DPrint* gfx();
-    void flushCanvas();
-    void loadPNGfromProgmem(Graphics2D* target, const unsigned char* array, unsigned int length);
+    // Arduino_Canvas_Graphics2D* getCanvas(void);
+    // Graphics2DPrint* gfx();
+    // void flushCanvas();
+    // void loadPNGfromProgmem(Graphics2D* target, const unsigned char* array, unsigned int length);
 
     // Power
     bool isCharging(void);
@@ -175,7 +175,7 @@ class OaqmHal {
     bool _requestEnableBuffer = false;
 
   private:
-    Arduino_Canvas_Graphics2D* canvas = nullptr;
+    //Arduino_Canvas_Graphics2D* canvas = nullptr;
 
     static OaqmHal* instance;
     OaqmTimeProvider* timeProvider = nullptr;
@@ -184,13 +184,19 @@ class OaqmHal {
     unsigned long _lastUserInteraction = 0;
 
     // array of available buttons for iteration (e.g. handling)
+    int _count[BTN_NUMBER];
+    int _count2[BTN_NUMBER];
     bool _btnLastState[BTN_NUMBER];
     bool _btnIsDown[BTN_NUMBER];
     bool _btnGoneUp[BTN_NUMBER];
     bool _btnSuppressUntilUpAgain[BTN_NUMBER];
     bool _btnGoneDown[BTN_NUMBER];
     unsigned long _btnIsDownMillis[BTN_NUMBER];
+    unsigned long _btnIsUpMillis[BTN_NUMBER];
     bool _btnDoubleClickTimeout[BTN_NUMBER];
+    bool _btnClicked[BTN_NUMBER];
+    bool _btnLongPress[BTN_NUMBER]; 
+    bool _btnShutdown[BTN_NUMBER];
     unsigned long _btnDoubleClickMillis[BTN_NUMBER];
     bool _btnDoubleClick[BTN_NUMBER];
     uint8_t _btnDetectDoubleClickCount[BTN_NUMBER];
@@ -208,7 +214,7 @@ class OaqmHal {
     FileSystemHal* fileSystem;
 
     std::unique_ptr<Devices> _devices = nullptr;
-#if OSW_PLATFORM_ENVIRONMENT == 1
+#if OAQM_PLATFORM_ENVIRONMENT == 1
     std::unique_ptr<Environment> _environment = nullptr;
 #endif
 
@@ -225,7 +231,7 @@ class OaqmHal {
     void expireWakeUpConfigs();
     WakeUpConfig* selectWakeUpConfig();
     void persistWakeUpConfig(OaqmHal::WakeUpConfig* config, bool toLightSleep);
-    std::optional<WakeUpConfig> readAndResetWakeUpConfig(bool fromLightSleep);
+    //std::optional<WakeUpConfig> readAndResetWakeUpConfig(bool fromLightSleep);
     void resetWakeUpConfig(bool useLightSleep);
 };
 
