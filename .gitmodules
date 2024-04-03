@@ -1,0 +1,36 @@
+[submodule "lib/Adafruit_BusIO"]
+	path = lib/Adafruit_BusIO
+	url = https://github.com/adafruit/Adafruit_BusIO.git
+[submodule "lib/Adafruit_GFX_Library"]
+	path = lib/Adafruit_GFX_Library
+	url = https://github.com/adafruit/Adafruit-GFX-Library.git
+[submodule "lib/Adafruit_Sensor"]
+	path = lib/Adafruit_Sensor
+	url = https://github.com/adafruit/Adafruit_Sensor.git
+[submodule "lib/ArduinoJson"]
+	path = lib/ArduinoJson
+	url = https://github.com/bblanchon/ArduinoJson.git
+[submodule "lib/DHTlib"]
+	path = lib/DHTlib
+	url = https://github.com/RobTillaart/DHTlib.git
+[submodule "lib/FastLED"]
+	path = lib/FastLED
+	url = https://github.com/FastLED/FastLED.git
+[submodule "lib/MH_Z19"]
+	path = lib/MH_Z19
+	url = https://github.com/WifWaf/MH-Z19.git
+[submodule "lib/MQUnifiedsensor"]
+	path = lib/MQUnifiedsensor
+	url = https://github.com/miguel5612/MQSensorsLib.git
+[submodule "lib/PMS_Library"]
+	path = lib/PMS_Library
+	url = https://github.com/fu-hsi/PMS.git
+[submodule "lib/RTC"]
+	path = lib/RTC
+	url = https://github.com/cvmanjoo/RTC.git
+[submodule "lib/RV_3028_C7_Arduino_Library"]
+	path = lib/RV_3028_C7_Arduino_Library
+	url = https://github.com/constiko/RV-3028_C7-Arduino_Library.git
+[submodule "lib/u8g2"]
+	path = lib/u8g2
+	url = https://github.com/olikraus/u8g2.git
