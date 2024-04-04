@@ -8,3 +8,14 @@ Welcome to OpenAQM firmware repository, we have outlined below the steps necessa
 
 <!-- https://gzip.swimburger.net/ -->
 <!-- https://tomeko.net/online_tools/file_to_hex.php?lang=en -->
+
+
+<!-- git clone --recurse-submodules https://github.com/OpenAQM/open-aqm-firmware.git
+
+git checkout development
+git add .
+git commit -m "ssome comment"
+git push
+
+$ git pull
+$ git submodule update --init --recursive -->
