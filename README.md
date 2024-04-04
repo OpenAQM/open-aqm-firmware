@@ -11,8 +11,10 @@ Welcome to OpenAQM firmware repository, we have outlined below the steps necessa
 
 
 <!-- git clone --recurse-submodules https://github.com/OpenAQM/open-aqm-firmware.git
-git add .
 
+git checkout development
+git add .
+git commit -m "ssome comment"
 git push
 
 $ git pull
